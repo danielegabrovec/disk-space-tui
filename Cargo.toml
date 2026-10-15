@@ -1,0 +1,30 @@
+[package]
+name = "disk-space-tui"
+version = "0.2.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Fast terminal UI to see what takes up your disk and free space safely (Windows, Linux, macOS; Italian/English)"
+authors = ["Daniele Gabrovec"]
+license = "MIT"
+repository = "https://github.com/danielegabrovec/disk-space-tui"
+readme = "README.md"
+keywords = ["disk", "tui", "cleanup", "disk-usage", "terminal"]
+categories = ["command-line-utilities", "filesystem"]
+exclude = ["/docs/screenshots"]
+
+[[bin]]
+name = "disk-space-tui"
+path = "src/main.rs"
+
+[dependencies]
+ratatui = "0.29"
+rayon = "1"
+sys-locale = "0.3"
+sysinfo = "0.33"
+trash = "5"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true
