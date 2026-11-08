@@ -373,3 +373,7 @@ che toccano eliminazione o protezioni devono avere i loro test.
 ## Licenza
 
 [MIT](LICENSE) © 2026 Daniele Gabrovec
+
+## Installer Windows
+
+La [Release v0.2.0](https://github.com/danielegabrovec/disk-space-tui/releases/tag/v0.2.0) offre anche un installer x64 per l’utente corrente, senza privilegi amministrativi. Il programma rimane una TUI da terminale. Lo script di packaging è in packaging/windows.iss.
